@@ -16,11 +16,9 @@ const HomePage = () => {
 const getUserProfileAndRepos=useCallback( async(username="burakorkmez")=>{
     setLoading(true);
     try {
-      const userRes=await fetch(`https://api.github.com/users/${username}`);
-      const userProfile=await userRes.json();
+      const userRes=await fetch(`http://localhost:5000/api/users/profile/${username}`);
+      const {repos,userProfile}=await userRes.json();
       setUserProfile(userProfile);
-      const repoRes=await fetch(userProfile.repos_url);
-      const repos=await repoRes.json();
       setRepos(repos);
       console.log("userProfile",userProfile);
       console.log("repos",repos);
@@ -47,7 +45,7 @@ const getUserProfileAndRepos=useCallback( async(username="burakorkmez")=>{
    setUserProfile(userProfile);
    setRepos(repos);
    setLoading(false);
-   setSortType("recent");
+   setSortType("recent")
   }
   const onSort=(sortType)=>{
           if(sortType==="recent")
