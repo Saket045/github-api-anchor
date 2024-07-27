@@ -7,6 +7,7 @@ import SignUpPage from './pages/SignUpPage.jsx'
 import ExplorePage from './pages/ExplorePage.jsx'
 import LikesPage from './pages/LikesPage.jsx'
 import Sidebar from './components/Sidebar.jsx'
+import {Toaster} from 'react-hot-toast'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
     <Route path="/explore" element={<ExplorePage/>}/>
     <Route path="/likes" element={<LikesPage/>}/>
    </Routes>
+   <Toaster/>
    </div>
     </div>
   )
