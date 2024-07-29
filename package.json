@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon backend/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"npm install && npm install --prefix frontend/my-project && npm run build --prefix frontend/my-project",
+    "start":" node backend/server.js"
   },
   "author": "",
   "license": "ISC",
