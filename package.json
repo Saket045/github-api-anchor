@@ -11,12 +11,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express-session": "^1.18.0",
+    "@types/passport": "^1.0.16",
+    "@types/passport-github2": "^1.2.9",
     "nodemon": "^3.1.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.5.1"
+    "express-session": "^1.18.0",
+    "mongoose": "^8.5.1",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12"
   }
 }

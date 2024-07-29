@@ -13,10 +13,10 @@ const HomePage = () => {
   const [loading,setLoading]=useState(false);
   const [sortType,setSortType]=useState("forks");
 
-const getUserProfileAndRepos=useCallback( async(username="burakorkmez")=>{
+const getUserProfileAndRepos=useCallback( async(username="Saket45")=>{
     setLoading(true);
     try {
-      const userRes=await fetch(`http://localhost:5000/api/users/profile/${username}`);
+      const userRes=await fetch(`/api/users/profile/${username}`);
       const {repos,userProfile}=await userRes.json();
       setUserProfile(userProfile);
       setRepos(repos);
