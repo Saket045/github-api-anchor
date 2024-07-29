@@ -64,7 +64,7 @@ const getUserProfileAndRepos=useCallback( async(username="Saket45")=>{
     <Search onSearch={onSearch}/>
     {repos.length > 0 && <SortRepos sortType={sortType} onSort={onSort}/>}
     
-    <div>
+    <div className=' px-8 md:flex flex-row gap-2 md:mb-0 mb-2'>
      {userProfile && !loading && <ProfileInfo userProfile={userProfile}/>} 
      {!loading && <Repos repos={repos}/>} 
       {loading && <Spinner/>}

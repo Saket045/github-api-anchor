@@ -29,14 +29,14 @@ const Sidebar = () => {
 					<IoHomeSharp size={20} />
 				</Link>
 
-				{authUser && (
+				{/* {authUser && (
 					<Link
 						to='/likes'
 						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg hover:bg-gray-800'
 					>
 						<FaHeart size={22} />
 					</Link>
-				)}
+				)} */}
 
 				{authUser && (
 					<Link
