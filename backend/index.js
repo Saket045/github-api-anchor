@@ -32,7 +32,7 @@ app.get("*",(req,res)=>{
 })
 
 console.log("dirname",__dirname);
-app.listen(process.env.PORT,()=>{
-    console.log(`server is running on port ${process.env.PORT}`);
+app.listen(PORT,()=>{
+    console.log(`server is running on port ${PORT}`);
     connectMongoDb();
 })
