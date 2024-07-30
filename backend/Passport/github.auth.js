@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import userModel from '../models/user.model.js'
 import User from '../models/user.model.js';
 const GITHUB_CLIENT_ID="Ov23liJxeZYkxamlXjlm";
+const GITHUB_CLIENT_SECRET="64c1378d906de5d32470981718666f8895eac42f"
 
 dotenv.config();
 passport.serializeUser(function(user, done) {
@@ -20,7 +21,7 @@ passport.serializeUser(function(user, done) {
   //   profile), and invoke a callback with a user object.
   passport.use(new GitHubStrategy({
       clientID: GITHUB_CLIENT_ID,
-      clientSecret:process.env.GITHUB_CLIENT_SECRET,
+      clientSecret:  GITHUB_CLIENT_SECRET,
       callbackURL: "/api/auth/github/callback"
     },
     async function(accessToken, refreshToken, profile, done) {
