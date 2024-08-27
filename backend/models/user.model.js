@@ -22,21 +22,6 @@ const userSchema = new mongoose.Schema(
 			type: [String],
 			default: [],
 		},
-		likedBy: [
-			{
-				username: {
-					type: String,
-					required: true,
-				},
-				avatarUrl: {
-					type: String,
-				},
-				likedDate: {
-					type: Date,
-					default: Date.now,
-				},
-			},
-		],
 	},
 	{ timestamps: true }
 );

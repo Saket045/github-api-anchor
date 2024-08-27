@@ -4,7 +4,6 @@ import userRoutes from './routes/user.route.js';
 import exploreRoutes from './routes/explore.route.js';
 import authRoutes from './routes/auth.route.js';
 import dotenv from 'dotenv';
-
 import passport from "passport";
 import './Passport/github.auth.js'
 import connectMongoDb from "./db/connectMongoDb.js";
@@ -25,8 +24,8 @@ app.use(passport.session());
 app.use("/api/users",userRoutes);
 app.use("/api/explore",exploreRoutes);
 app.use("/api/auth",authRoutes);
-
-app.use(express.static(path.join(__dirname,"/frontend/my-project/dist")));
+console.log(process.env)
+// app.use(express.static(path.join(__dirname,"/frontend/my-project/dist")));
 app.get("*",(req,res)=>{
     res.sendFile(path.join(__dirname,"frontend","my-project","dist","index.html"))
 })
